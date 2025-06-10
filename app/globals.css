@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.show {
+  animation: dropdown 100ms ease-in-out;
+  display: flex;
+  z-index: 20;
+}
+
+.hide {
+  animation: raise 100ms ease-in-out;
+  display: none;
+}
+input {
+  padding: 5px 0.5em;
+}
+input::placeholder {
+  color: black;
+}
+input:focus-within {
+  outline: none;
+}
+.fourth {
+  background: url("../public/food-stand-2625671_1280.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.palm {
+  animation: wave 2s ease-in-out infinite alternate; /* Modified */
+}
+@keyframes dropdown {
+  0% {
+    transform: translateY(-20px);
+    display: none;
+  }
+  100% {
+    transform: translateY(0);
+    display: flex;
+  }
+}
+
+@keyframes raise {
+  0% {
+    transform: translateY(0);
+    display: flex;
+  }
+  100% {
+    transform: translateY(-20px);
+    display: none;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .ham {
+    display: none;
+  }
+  .about-text {
+    min-width: 600px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .not-shown {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    font-size: 20px;
+  }
+  .xm {
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    /* max-width: 400px; */
+    min-width: 300px;
+    margin-left: auto;
+    gap: 4em;
+  }
+  .About {
+    padding-bottom: 4em;
+    padding-right: 1em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .card {
+    flex-direction: row;
+    /* flex-wrap: wrap;  */
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .bg-image {
+    /* height: 400px; */
+    width: 370px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .about-text {
+    font-size: 1.3em;
+    max-width: 800px;
+    /* color: red; */
+  }
+  #About {
+    font-size: 1.8em;
+  }
+  .intro-text {
+    font-size: 1em;
+  }
+  .palm {
+    height: 200px;
+    width: 250px;
+  }
+  .xm {
+    padding: 2em;
+    /* border: 1px solid black; */
+    gap: 5em;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .article {
+    max-width: none;
+  }
+  .main {
+    gap: 1em;
+    justify-content: space-between;
+    padding-bottom: 0;
+    padding: 5em;
+    align-items: center;
+    font-size: 1.2em;
+    /* border: 1px solid black; */
+  }
+  input {
+    min-width: 400px;
+  }
+}
