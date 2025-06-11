@@ -21,12 +21,16 @@ function Footer() {
     <section className="">
       <div className="bg-white pt-[3em] pb-[0.5em] flex flex-col font-bold">
         <div className="flex flex-col text-right md:flex-row md:items-center md:justify-end md:gap-4">
-          <Link href={""}>Instagram</Link>
-          <Link href={""}>X (formerly called twitter)</Link>
+          <Link href="https://www.instagram.com/heichatai/">Instagram</Link>
+          <Link href="https://twitter.com/heichatai">
+            X (formerly called twitter)
+          </Link>
         </div>
         <div className="flex gap-2  items-center justify-center">
           <Image src={gmail} width={20} height={20} alt="gmail" />
-          <p>ask@heiservicebot.com.ng</p>
+          <Link href="mailto:devheiservices@gmail.com">
+            ask@heiservicebot.com.ng
+          </Link>
         </div>
       </div>
       <div className="bg-black text-white p-4 flex gap-4 justify-center m">
