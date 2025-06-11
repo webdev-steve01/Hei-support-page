@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // Import necessary Firestore functions
 import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
 // Assuming 'db' is correctly initialized and exported from "@/Firebase"

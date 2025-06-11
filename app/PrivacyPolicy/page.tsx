@@ -144,8 +144,8 @@ function PrivacyPolicyPage() {
           <li>Clarification on how your data is used</li>
         </ul>
         <p className="mb-6 text-gray-700 leading-relaxed">
-          To make such a request, simply message: "Delete my data" or email us
-          directly.
+          To make such a request, simply message: &#34;Delete my data&#34; or
+          email us directly.
         </p>
 
         {/* Section 8: Contact Us */}

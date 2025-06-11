@@ -17,7 +17,9 @@ function FirstSection() {
             alt="logo"
             className="palm"
           />
-          <p className="font-bold text-[1.5em] text-[#000000B0]">"Saanu"</p>
+          <p className="font-bold text-[1.5em] text-[#000000B0]">
+            &quot;Saanu&quot;
+          </p>
         </div>
         <article className="text-center z-10">
           <h1 className="font-black text-[2em]">Hei. Just Ask.</h1>

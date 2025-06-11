@@ -49,7 +49,8 @@ function page() {
             terms of service and our acceptable use policy.
           </li>
           <li>
-            Hei is not a human — but it's designed to assist you in real time.
+            Hei is not a human — but it&apos;s designed to assist you in real
+            time.
           </li>
         </ul>
 
