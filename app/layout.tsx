@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto_Condensed, Outfit } from "next/font/google";
+import { BooleanProvider } from "@/contexts/BooleanContext";
 
 // Configure Roboto Condensed
 const robotoCondensed = Roboto_Condensed({
@@ -64,7 +65,7 @@ export default function RootLayout({
       <body
         className={`${outfit.className} ${robotoCondensed.className} antialiased`}
       >
-        {children}
+        <BooleanProvider>{children}</BooleanProvider>
       </body>
     </html>
   );

@@ -1,8 +1,27 @@
+"use client";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import Logo from "@/public/first-section/Support/Logo.svg";
 import whatsapp from "@/public/whatsapp/Support/Vector.svg";
 import background from "@/public/Hey-1/Support/4112338.png";
+import { useBoolean } from "@/contexts/BooleanContext";
 function FirstSection() {
+  const [isHovered, setIsHovered] = useState(false);
+  const { setValue } = useBoolean();
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    // triggerOnce: true,
+  });
+  // Set the value to true when the section is in view
+
+  useEffect(() => {
+    if (inView) {
+      setValue(true);
+    } else {
+      setValue(false);
+    }
+  }, [inView, setValue]);
   return (
     <section
       className="flex flex-col gap-[3em]  py-3 relative z-10 h-[90vh]"
@@ -17,7 +36,7 @@ function FirstSection() {
             alt="logo"
             className="palm"
           />
-          <p className="font-bold text-[1.5em] text-[#000000B0]">
+          <p className="font-bold text-[1.5em] text-[#000000B0]" ref={ref}>
             &quot;Saanu&quot;
           </p>
         </div>
@@ -30,10 +49,14 @@ function FirstSection() {
       </div>
       <button
         type="button"
-        className="bg-black flex gap-[1.5em] text-white  mx-auto px-[2em] py-2 rounded-md z-10"
+        className={
+          "bg-black flex gap-[1.5em] text-white  mx-auto px-[2em] py-2 rounded-md z-10 hover:cursor-not-allowed hover:bg-[#000000B0] transition-all duration-300 "
+        }
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <Image src={whatsapp} width={20} height={30} alt="whatsapp" />
-        <p>Tryout on WhatsApp</p>
+        <p>{isHovered ? "Coming Soon" : "Try out on whatsapp"}</p>
       </button>
       <div className="absolute right-0 bottom-[10px] z-0">
         <Image

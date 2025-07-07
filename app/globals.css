@@ -22,6 +22,8 @@ html {
   animation: raise 100ms ease-in-out;
   display: none;
 }
+/* Add these classes if you're not using a CSS framework for them */
+
 input {
   padding: 5px 0.5em;
 }
